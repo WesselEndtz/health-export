@@ -1,7 +1,11 @@
 from cli.prompts import ask_for_name, ask_for_age
+from decouple import Config, Csv
+config = Config()
 
+DEBUG = config.getboolean("DEBUG")
+SECRET_KEY = config.get("SECRET_KEY")
+DATABASE_URL = config.get("DATABASE_URL")
 
-from .prompts import ask_for_name, ask_for_age
 
 
 def main():
