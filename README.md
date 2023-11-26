@@ -19,12 +19,14 @@ git push -u origin develop
    - `git add .`
 3. Install required packages inside the venv
 - `pip install -r requirements.txt`
-4. Setup .env file for local environment
+4. Setup your enviroment settings
    ```bash
-   cp .env.example .env
+   python setup.py
    ```
 5. Init Black Linter:
     - `pre-commit install`
     - `pre-commit run --all-files`
 6. Run app:
-   - `python3.9 main.py`
+   ```bash
+   python main.py
+   ```
